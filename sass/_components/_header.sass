@@ -1,0 +1,38 @@
+.header-bg
+  // background-image: url("/html/img/animals-1851535.jpg")
+  // background-position: 50% 50%
+  // background-size: cover
+  // background-repeat: no-repeat
+  background-color: #c9c9c9
+  min-height: 100vh
+.header-text
+  z-index: 2
+  .header-contact
+    color: #4c4c4c
+    margin-top: 80px
+    text-align: right
+    p
+      +rfs(28)
+    p span
+      +rfs(14)
+    @media (max-width: 767px)
+      color: #FFF
+  .header-title
+    background-color: rgba(0, 0, 0, .34)
+    padding: 20px
+    position: relative
+    top: 0
+    h1,
+    p
+      color: #FFF
+      position: relative
+    @media (max-width: 767px)
+      background-color: transparent
+      top: 100px
+      position: relative
+      padding: 0
+      h1
+        font-size: 22px
+
+.header-nav
+  background-color: #0275d8

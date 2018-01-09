@@ -1,0 +1,58 @@
+.container-fluid.mt-5.footer-bg
+  .container.pt-5.footer-bg-color
+    .row
+      .col-12.col-md-4
+        h2 Обратная связь
+        form(action="https://formspree.io/kolevan@bk.ru" method="POST")
+          .form-group
+            input#name(type="text" name="Имя" autocomplete="on" required)
+            label.control-label(for="name" data-error="wrong" data-success="right") Введите ваше имя:
+            span.bar
+          .form-group
+            input#phone(type="text" name="Телефон" autocomplete="on" required)
+            label.control-label(for="phone" data-error="wrong" data-success="right") 
+              span.hidden-md-down Введите ваш 
+              | номер телефона:
+            span.bar
+          .form-group
+            input#e-mail(type="email" name="e-mail" autocomplete="on" required)
+            label.control-label(for="e-mail" data-error="wrong" data-success="right") Введите ваш e-mail 
+              span.hidden-lg-down для обратной связи:
+            span.bar
+          .form-group
+            textarea#text-area(name="Текст сообщения")
+            label.control-label(for="text-area") Напишите здесь ваш вопрос:
+            span.bar
+          .checkbox
+            label(for="checkbox")
+              input#checkbox(type="checkbox" required)
+              span.helper
+              |  Я даю своё согласие на обработку моих персональных данных 
+              a(href="http://www.consultant.ru/document/cons_doc_LAW_61801/" title="Подробнее о законе" target="_blank" rel="nofollow") &laquo;О&nbsp;персональных данных&raquo; &#8470;&nbsp;152-ФЗ
+          input(type="hidden" name="_next" value="http://zatochka39.ru/")
+          input(type="hidden" name="_subject" value="Обратная связь: Роман Волгасов")
+          input(type="hidden" name="_language" value="ru")
+          
+          .btn-container
+            button.button(type="submit" value="Send"): span Отправить
+      .col-12.col-md-8#contacts
+        h2 Контакты
+        address
+          p г. Калининград, ул. Ореховая 7, офис 13
+        address
+          p Телефон: 8 (900) 56‒56‒156
+          p: span пн‒пт. 10:00‒17:50
+        p 
+          a.mr-5(href="https://vk.com/zatochka_39" rel="nofollow" title="Девять мастеров: вконтакте" target="_blank")
+            span.fa.fa-2x.fa-vk
+          a.mr-5(href="https://www.instagram.com/konstantinzatochka/" rel="nofollow" title="Девять мастеров: инстаграм" target="_blank")
+            span.fa.fa-2x.fa-instagram
+          a(href="https://www.youtube.com/channel/UC-SA9d17NVvJACXgM4MdZ-Q" rel="nofollow" title="Девять мастеров: ютуб" target="_blank")
+            span.fa.fa-2x.fa-youtube-square
+        a(href="https://2gis.ru/kaliningrad/geo/5630135189383579/inside/5630135189383579/profiles/5630028815727540%2C5630028815609116%2C70000001020335730%2C70000001020736291%2C70000001022745425/firm/70000001020335730?queryState=zoom%2F17" rel="nofollow" title="Где заточить инструмент в Калининграде?")
+          img.mb-5.img-fluid(src="/img/map.jpg" alt="Заточка инструмента в Калининграде" title="Перейти в 2 ГИС")
+  .row
+    .col
+      p.align-text-bottom.text-center © Оформление, разработка и продвижение сайта. 
+        a(href="http://romanvolgasov.ru" rel="nofollow" target="_blank" title="Оформление, разработка и продвижение сайта.") Волгасов Роман
+        | , специально для студии заточки инструментов «Девять Мастеров», Калининград 2017

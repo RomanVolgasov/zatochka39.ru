@@ -1,0 +1,94 @@
+@import "./_rfs.scss"
+
+html
+  color: #ccc
+  font-size: 100%
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  line-height: 1.375
+  @media (min-width: 1px) and (max-width: 991px)
+    line-height: 1.4
+
+@font-face
+  font-family: 'League Gothic'
+  src: url('../fonts/leaguegothic-400-normal.woff2') format('woff2'), url('../fonts/leaguegothic-400-normal.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+
+// @font-face
+//   font-family: 'Roboto'
+//   src: url('../fonts/roboto-400-normal.woff') format('woff')
+//   font-weight: 400
+//   font-style: normal
+
+// @font-face
+//   font-family: 'Roboto'
+//   src: url('../fonts/roboto-500-normal.woff') format('woff')
+//   font-weight: 500
+//   font-style: bold
+
+// @font-face
+//   font-family: 'Anglecia Pro Dsp';
+//   src: url('../fonts/angleciadisplay-400-normal.woff') format('woff')
+//   font-weight: 400
+//   font-style: normal
+
+body
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  // text-align: justify
+  color: #4c4c4c
+
+p, ul, ol
+  +rfs(16)
+  line-height: 1.4rem
+
+h1,
+h2,
+h3,
+h4
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+h1
+  +rfs(40)
+
+h2
+  +rfs(32)
+  font-weight: 100
+  letter-spacing: 0.1rem
+  line-height: 1.05
+  margin: 1.5rem 0
+  @media (min-width: 992px) and (max-width: 1199px)
+    line-height: 1.125
+    margin: 1.25rem 0
+  @media (min-width: 768px) and (max-width: 991px)
+    line-height: 1.25
+    margin: 1.25rem 0
+  @media (max-width: 767px)
+    line-height: 1.25
+    text-align: center
+    margin: 1rem 0
+    word-wrap: break-word
+
+h3
+  +rfs(28)
+  font-weight: 100
+  letter-spacing: 0.1rem
+  line-height: 1.25
+  margin: 0.5rem 0 0.5rem 0
+  @media (max-width: 767px)
+    line-height: 1.15384615
+    text-align: center
+    margin: 0.5rem 0
+    word-wrap: break-word
+
+h4
+  +rfs(24)
+  font-weight: 100
+  line-height: 1.25
+  margin: 0.5rem 0 0.5rem 0
+  @media (min-width: 768px) and (max-width: 991px)
+    line-height: 1.13636364
+  @media (max-width: 767px)
+    line-height: 1.13636364
+    margin: 1rem 0
+    text-align: center
+    word-wrap: break-word

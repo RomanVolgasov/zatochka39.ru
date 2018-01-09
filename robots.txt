@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: *404.html*
+Sitemap: http://zatochka39.ru/sitemap.xml
+Host: http://zatochka39.ru/

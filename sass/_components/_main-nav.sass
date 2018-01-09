@@ -1,0 +1,128 @@
+.main-nav.--logotype
+  width: 128px
+  height: auto
+
+
+// Component
+.top-nav__grid
+  align-items: stretch
+  display: flex
+  flex-flow: row wrap
+  padding: 1rem 0 0
+  margin-left: auto
+  margin-right: auto
+  @media (min-width: 768px) and (max-width: 991px)
+    width: 750px
+  @media (min-width: 992px) and (max-width: 1199px)
+    width: 970px
+  @media (min-width: 1200px)
+    width: 1140px
+
+.top-nav
+  justify-content: space-between
+
+.top-nav
+  & > .toggle
+    background-color: transparent
+    background-image: none
+    border: 0
+    cursor: pointer
+    display: inline-block
+    padding: 1.8rem
+    text-align: center
+    touch-action: auto
+    user-select: none
+    vertical-align: middle
+    white-space: nowrap
+    @media (min-width: 768px)
+      display: none
+  & > .toggle > .icon
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+    position: relative
+    &,
+    &:before,
+    &:after
+      background-color: red
+      display: block
+      height: 0.1875rem
+      transition: background-color 0.3s linear, transform 0.3s linear
+      width: 1.5rem
+    &:before, &:after
+      content: ""
+      position: absolute
+    &:before
+      top: -0.5rem
+    &:after
+      top: 0.5rem
+  & > .toggle.-active > .icon
+    background-color: transparent
+    &:before
+      transform: translateY(0.5rem) rotate(45deg)
+    &:after
+      transform: translateY(-0.5rem) rotate(-45deg)
+  & > .top-nav__list
+    align-items: center
+    display: none
+    flex-flow: row nowrap
+    white-space: nowrap
+    @media (min-width: 767px)
+      display: flex
+    @media (max-width: 767px)
+      background-color: #fff
+      border-top: 0.0625rem solid #ccc
+      height: 5rem
+      left: 0
+      overflow-y: hidden
+      overflow-x: auto
+      position: absolute
+      top: 6.3rem
+      width: 100%
+      &::-webkit-scrollbar
+        width: 0
+    &.-on
+      display: flex
+
+.top-nav__logo
+  background: url("../img/logo.svg") no-repeat
+  background-size: cover
+  border: 0.0625rem solid red
+  border-radius: 0.3125rem
+  display: inline-block
+  height: 5rem
+  width: 5rem
+
+.top-nav__item
+  color: #000
+  cursor: pointer
+  border: 0.0625rem solid transparent
+  margin-right: 1rem
+  outline-color: red
+  padding: 0.58rem 1rem 0.6rem
+  transition: all .5s ease
+  text-decoration: none
+  &:hover
+    border: 0.0625rem solid #ccc
+    border-radius: 0.3125rem
+    transition: all .5s ease
+  @media (max-width: 767px)
+    &:first-of-type
+      margin-left: 0
+  @media (min-width: 768px) and (max-width: 991px)
+    &:last-of-type
+      margin-right: 0.3rem
+
+.active
+  background-color: #ccc
+  border-radius: 0.3125rem
+  &:hover
+    border: 0.0625rem solid #ccc
+
+.top-nav__item_btn
+  background-color: red
+  border-radius: 0.3125rem
+  color: #fff
+  margin-right: 0
+  &:hover
+    background-color: transparent
+    color: #000

@@ -1,0 +1,86 @@
+doctype
+html(lang="ru")
+  head
+    include _template/head/_service.jade
+    include _template/head/_pre.jade
+    // ⚠️ SEO ⚠️
+    title Ремонт и заточка маникюрного инструмента Калининград
+    meta(name="description" content="Цена на заточку ножниц, маникюрных инструментов, парикмахерских ножниц, ножей для мясорубки, портновских ножниц, кухонных ножей в Калининграде.")
+    meta(name="keywords" content="заточка, ручная заточка, конвекционная заточка, калининград, инструмент, маникюрный инструмент, кухонный нож, нож, парикмахерские ножницы, ножницы, цена")
+    meta(name="robots" content="all")
+    link(rel="canonical" href="http://zatochka39.ru/")
+    include _template/head/_favicon.jade
+    include _template/head/_stylesheet.jade
+    include _template/head/_web-master.jade
+    // ⚠️ OPEN GRAPH ⚠️
+    meta(property="og:title" content="Профессиональная заточка маникюрных и парикмахерских инструментов в Калининграде")
+    meta(property="og:description" content="Ваш инструмент будет заточен за 24 часа или даже быстрее! А качество заточки сравнимое с новым инструментом и даже острее!")
+    meta(property="og:image" content="/img/main-page-bg.jpg")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="http://zatochka39.ru/")
+    include _template/head/_author.jade
+  body.hyphenate#top
+    include _components/_main-header.jade
+    .container
+      include _components/_features.jade
+    .container
+      .row
+        include _components/_service.jade
+        include _components/_price.jade
+    .container
+      include _components/_how-to-order.jade
+    .container
+      include _components/_shop.jade
+    .container
+      .row
+        include _components/_reviews.jade
+    .container
+      include _components/_about.jade
+    include _components/_footer.jade
+
+    include _template/scripts/_scripts.jade
+    script.
+      // Scroll
+      document.addEventListener('DOMContentLoaded', function(){
+        const easeFunctions = {
+          easeInQuad: function (t, b, c, d) {
+            t /= d;
+            return c * t * t + b;
+          },
+          easeOutQuad: function (t, b, c, d) {
+            t /= d;
+            return -c * t* (t - 2) + b;
+          }
+        }
+        const moveTo = new MoveTo({
+          ease: 'easeInQuad'
+        }, easeFunctions);
+        const triggers = document.getElementsByClassName('js-trigger');
+        for (var i = 0; i < triggers.length; i++) {
+          moveTo.registerTrigger(triggers[i]);
+        }
+      });
+      // Hyphenator
+      Hyphenator.run();
+      // Slik
+      $(document).ready(function() {
+        $(".reviews").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          pauseOnFocus: true
+        });
+        $(".about").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          autoplay: true,
+          pauseOnFocus: true
+        });
+      });
+    include _template/scripts/_counter.jade
